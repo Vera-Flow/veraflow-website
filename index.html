@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NutarFlow – Coming Soon</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background: linear-gradient(120deg, #e0e7ef 0%, #f8fafc 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Roboto", Arial, sans-serif;
+        position: relative;
+        overflow: hidden;
+      }
+      /* Decorative blurred shapes */
+      .bg-shape {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(60px);
+        opacity: 0.35;
+        z-index: 0;
+      }
+      .bg-shape1 {
+        width: 340px;
+        height: 340px;
+        background: #2b6cb0;
+        top: -80px;
+        left: -120px;
+      }
+      .bg-shape2 {
+        width: 260px;
+        height: 260px;
+        background: #38a169;
+        bottom: -60px;
+        right: -80px;
+      }
+      .container {
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 22px;
+        box-shadow: 0 8px 32px rgba(60, 72, 88, 0.18);
+        padding: 56px 38px 38px 38px;
+        max-width: 440px;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        backdrop-filter: blur(6px);
+      }
+      .hero-icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 18px auto;
+        display: block;
+        opacity: 0.92;
+      }
+      .logo {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.6rem;
+        color: #1a365d;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        text-shadow: 0 2px 8px #e0e7ef80;
+      }
+      .subtitle {
+        font-size: 1.13rem;
+        color: #3b4a6b;
+        margin-bottom: 26px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+      .coming-soon {
+        font-size: 2.1rem;
+        color: #2b6cb0;
+        margin-bottom: 18px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .desc {
+        color: #4a5568;
+        font-size: 1.07rem;
+        margin-bottom: 34px;
+        line-height: 1.6;
+      }
+      .notify {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 2;
+      }
+      .notify input[type="email"] {
+        padding: 0.7em 1em;
+        border: 1.5px solid #cbd5e1;
+        border-radius: 8px;
+        font-size: 1rem;
+        outline: none;
+        width: 60%;
+        transition: border 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 8px #e0e7ef33;
+        background: #f8fafc;
+      }
+      .notify input[type="email"]:focus {
+        border: 1.5px solid #2b6cb0;
+        box-shadow: 0 0 0 2px #2b6cb033;
+      }
+      .notify button {
+        background: #2b6cb0;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 0.7em 1.3em;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 2px 8px #2b6cb033;
+        transition: background 0.18s, box-shadow 0.18s, transform 0.13s;
+        outline: none;
+      }
+      .notify button:hover,
+      .notify button:focus {
+        background: #1a365d;
+        box-shadow: 0 4px 16px #2b6cb044;
+        transform: translateY(-1.5px) scale(1.035);
+      }
+      .success-message {
+        color: #fff;
+        background: #38a169;
+        font-size: 1rem;
+        margin-top: 14px;
+        display: none;
+        opacity: 0;
+        border-radius: 6px;
+        padding: 10px 0;
+        font-weight: 500;
+        box-shadow: 0 2px 8px #38a16933;
+        letter-spacing: 0.5px;
+        transition: opacity 0.7s;
+      }
+      @media (max-width: 500px) {
+        .container {
+          padding: 28px 4vw 18px 4vw;
+          max-width: 98vw;
+        }
+        .logo {
+          font-size: 2rem;
+        }
+        .coming-soon {
+          font-size: 1.3rem;
+        }
+        .hero-icon {
+          width: 44px;
+          height: 44px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-shape bg-shape1"></div>
+    <div class="bg-shape bg-shape2"></div>
+    <div class="container">
+      <svg
+        class="hero-icon"
+        viewBox="0 0 64 64"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="10"
+          y="14"
+          width="44"
+          height="36"
+          rx="6"
+          fill="#2b6cb0"
+          fill-opacity="0.13"
+        />
+        <rect
+          x="14"
+          y="18"
+          width="36"
+          height="28"
+          rx="4"
+          fill="#2b6cb0"
+          fill-opacity="0.22"
+        />
+        <rect
+          x="18"
+          y="22"
+          width="28"
+          height="20"
+          rx="2"
+          fill="#2b6cb0"
+          fill-opacity="0.35"
+        />
+        <path
+          d="M22 32h20M22 38h12"
+          stroke="#2b6cb0"
+          stroke-width="2.2"
+          stroke-linecap="round"
+        />
+        <circle cx="32" cy="26" r="2.5" fill="#38a169" />
+      </svg>
+      <div class="logo">NutarFlow</div>
+      <div class="subtitle">Empowering Maltese Notaries</div>
+      <div class="coming-soon">Coming Soon</div>
+      <div class="desc">
+        NutarFlow will help notaries in Malta automate the drafting of notes and
+        documents, saving time and reducing errors. Stay tuned for a smarter,
+        faster workflow!
+      </div>
+      <form class="notify" id="notifyForm" autocomplete="off">
+        <input type="email" id="email" placeholder="Your email" required />
+        <button type="submit">
+          <span
+            style="
+              display: inline-flex;
+              align-items: center;
+              gap: 0.28em;
+              font-size: 0.98em;
+              white-space: nowrap;
+            "
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style="vertical-align: middle; min-width: 18px"
+            >
+              <rect width="20" height="20" rx="4" fill="none" />
+              <path
+                d="M3.5 6.5A1.5 1.5 0 0 1 5 5h10a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 15 15H5a1.5 1.5 0 0 1-1.5-1.5v-7Z"
+                stroke="#fff"
+                stroke-width="1.3"
+              />
+              <path
+                d="M4.5 6.75 10 11.25l5.5-4.5"
+                stroke="#fff"
+                stroke-width="1.3"
+                stroke-linecap="round"
+              />
+            </svg>
+            Notify Me
+          </span>
+        </button>
+      </form>
+      <div class="success-message" id="successMessage" style="display: none">
+        Thank you! We'll keep you updated.
+      </div>
+    </div>
+    <script>
+      // Replace with your Brevo form endpoint (from the iframe src, extract the base and add /form)
+      const BREVO_FORM_ENDPOINT =
+        "https://2d94d8e5.sibforms.com/serve/MUIFAOLpOpAdRFbinbDcpHr07F8EzHoDMfdrpsgyRgSvYJNgrCNCpq07YBbHBiX2MfV-T7Xhb5JwuRQliYVp200-uCmwZhp-W_24ivWHsayYYoQvVuqzD5p87AFaSfhoO9Vml03Kr1nlMpk4dflDZoP9N5Bne61X8P1c2EMUb9ysbKpCnw0foSj75HT0AMkyW_n9TYoEru5xzOXL5g==";
+
+      const form = document.getElementById("notifyForm");
+      const emailInput = document.getElementById("email");
+      const successMessage = document.getElementById("successMessage");
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const email = emailInput.value.trim();
+        if (!email) return;
+
+        // Prepare form data as Brevo expects
+        const formData = new FormData();
+        formData.append("EMAIL", email);
+
+        try {
+          const response = await fetch(BREVO_FORM_ENDPOINT, {
+            method: "POST",
+            mode: "no-cors", // Brevo may not support CORS, so we use no-cors
+            body: formData,
+          });
+          // Show success regardless of response due to no-cors
+          successMessage.style.display = "block";
+          setTimeout(() => {
+            successMessage.style.opacity = "1";
+          }, 10);
+          emailInput.value = "";
+          setTimeout(() => {
+            successMessage.style.opacity = "0";
+            setTimeout(() => {
+              successMessage.style.display = "none";
+            }, 700);
+          }, 4000);
+        } catch (err) {
+          alert("There was a problem subscribing. Please try again later.");
+        }
+      });
+    </script>
+  </body>
+</html>
