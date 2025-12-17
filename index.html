@@ -3,25 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NutarFlow – Coming Soon</title>
+    <title>NutarFlow – Automate Deed Note Drafting for Notaries</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        background: linear-gradient(120deg, #e0e7ef 0%, #f8fafc 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: "Roboto", Arial, sans-serif;
-        position: relative;
-        overflow: hidden;
-      }
-      /* Decorative blurred shapes */
       .bg-shape {
         position: absolute;
         border-radius: 50%;
@@ -32,272 +24,198 @@
       .bg-shape1 {
         width: 340px;
         height: 340px;
-        background: #2b6cb0;
+        background: #09abe7;
         top: -80px;
         left: -120px;
       }
       .bg-shape2 {
         width: 260px;
         height: 260px;
-        background: #38a169;
+        background: #004080;
         bottom: -60px;
         right: -80px;
       }
-      .container {
-        background: rgba(255, 255, 255, 0.85);
-        border-radius: 22px;
-        box-shadow: 0 8px 32px rgba(60, 72, 88, 0.18);
-        padding: 56px 38px 38px 38px;
-        max-width: 440px;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-        backdrop-filter: blur(6px);
-      }
-      .hero-icon {
-        width: 64px;
-        height: 64px;
-        margin: 0 auto 18px auto;
-        display: block;
-        opacity: 0.92;
-      }
-      .logo {
-        font-family: "Montserrat", sans-serif;
-        font-size: 2.6rem;
-        color: #1a365d;
-        letter-spacing: 2px;
-        margin-bottom: 10px;
-        font-weight: 700;
-        text-shadow: 0 2px 8px #e0e7ef80;
-      }
-      .subtitle {
-        font-size: 1.13rem;
-        color: #3b4a6b;
-        margin-bottom: 26px;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-      }
-      .coming-soon {
-        font-size: 2.1rem;
-        color: #2b6cb0;
-        margin-bottom: 18px;
-        font-weight: 700;
-        letter-spacing: 1px;
-      }
-      .desc {
-        color: #4a5568;
-        font-size: 1.07rem;
-        margin-bottom: 34px;
-        line-height: 1.6;
-      }
-      .notify {
-        display: flex;
-        gap: 0.5rem;
-        justify-content: center;
-        margin-bottom: 10px;
-        position: relative;
-        z-index: 2;
-      }
-      .notify input[type="email"] {
-        padding: 0.7em 1em;
-        border: 1.5px solid #cbd5e1;
-        border-radius: 8px;
-        font-size: 1rem;
-        outline: none;
-        width: 60%;
-        transition: border 0.2s, box-shadow 0.2s;
-        box-shadow: 0 2px 8px #e0e7ef33;
-        background: #f8fafc;
-      }
-      .notify input[type="email"]:focus {
-        border: 1.5px solid #2b6cb0;
-        box-shadow: 0 0 0 2px #2b6cb033;
-      }
-      .notify button {
-        background: #2b6cb0;
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        padding: 0.7em 1.3em;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        box-shadow: 0 2px 8px #2b6cb033;
-        transition: background 0.18s, box-shadow 0.18s, transform 0.13s;
-        outline: none;
-      }
-      .notify button:hover,
-      .notify button:focus {
-        background: #1a365d;
-        box-shadow: 0 4px 16px #2b6cb044;
-        transform: translateY(-1.5px) scale(1.035);
-      }
-      .success-message {
-        color: #fff;
-        background: #38a169;
-        font-size: 1rem;
-        margin-top: 14px;
-        display: none;
-        opacity: 0;
-        border-radius: 6px;
-        padding: 10px 0;
-        font-weight: 500;
-        box-shadow: 0 2px 8px #38a16933;
-        letter-spacing: 0.5px;
-        transition: opacity 0.7s;
-      }
-      @media (max-width: 500px) {
-        .container {
-          padding: 28px 4vw 18px 4vw;
-          max-width: 98vw;
-        }
-        .logo {
-          font-size: 2rem;
-        }
-        .coming-soon {
-          font-size: 1.3rem;
-        }
-        .hero-icon {
-          width: 44px;
-          height: 44px;
-        }
-      }
     </style>
   </head>
-  <body>
+  <body
+    class="m-0 p-0 font-['Roboto'] bg-gradient-to-br from-slate-200 to-slate-50 text-slate-800 leading-relaxed"
+  >
     <div class="bg-shape bg-shape1"></div>
     <div class="bg-shape bg-shape2"></div>
-    <div class="container">
-      <svg
-        class="hero-icon"
-        viewBox="0 0 64 64"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+    <header class="text-center py-10 px-5 relative z-10">
+      <div
+        class="font-['Montserrat'] text-5xl text-slate-700 tracking-widest mb-2.5 font-bold drop-shadow-lg"
       >
-        <rect
-          x="10"
-          y="14"
-          width="44"
-          height="36"
-          rx="6"
-          fill="#2b6cb0"
-          fill-opacity="0.13"
-        />
-        <rect
-          x="14"
-          y="18"
-          width="36"
-          height="28"
-          rx="4"
-          fill="#2b6cb0"
-          fill-opacity="0.22"
-        />
-        <rect
-          x="18"
-          y="22"
-          width="28"
-          height="20"
-          rx="2"
-          fill="#2b6cb0"
-          fill-opacity="0.35"
-        />
-        <path
-          d="M22 32h20M22 38h12"
-          stroke="#2b6cb0"
-          stroke-width="2.2"
-          stroke-linecap="round"
-        />
-        <circle cx="32" cy="26" r="2.5" fill="#38a169" />
-      </svg>
-      <div class="logo">NutarFlow</div>
-      <div class="subtitle">Empowering Maltese Notaries</div>
-      <div class="coming-soon">Coming Soon</div>
-      <div class="desc">
-        NutarFlow will help notaries in Malta automate the drafting of notes and
-        documents, saving time and reducing errors. Stay tuned for a smarter,
-        faster workflow!
+        NutarFlow
       </div>
-      <form class="notify" id="notifyForm" autocomplete="off">
-        <input type="email" id="email" placeholder="Your email" required />
-        <button type="submit">
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 0.28em;
-              font-size: 0.98em;
-              white-space: nowrap;
-            "
+      <div class="text-xl text-slate-600 mb-5 font-medium tracking-wide">
+        Empowering Maltese Notaries
+      </div>
+      <p class="max-w-4xl mx-auto mb-10 text-xl text-slate-600">
+        Automate the drafting of deed notes in minutes using OCR and AI
+        technology. Upload your Word document templates with placeholders, and
+        let NutarFlow generate accurate documents, reducing manual work, errors,
+        and double-checking so you can focus on billable tasks.
+      </p>
+      <a
+        href="#features"
+        class="bg-[#09abe7] text-white border-none rounded-lg py-3 px-6 text-xl font-semibold cursor-pointer no-underline inline-block transition-all duration-200 hover:bg-slate-700 hover:-translate-y-1"
+        >Learn More <i class="fas fa-arrow-right ml-2"></i
+      ></a>
+    </header>
+    <section
+      id="features"
+      class="max-w-screen-xl mx-auto py-20 px-8 relative z-10"
+    >
+      <h2 class="font-['Montserrat'] text-5xl text-slate-700 text-center mb-10">
+        Key Features
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div
+          class="text-center py-8 px-6 bg-white/90 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        >
+          <i class="fas fa-file-upload text-4xl text-[#09abe7] mb-5 block"></i>
+          <h3 class="text-xl text-[#09abe7] mb-3">Template Upload</h3>
+          <p>
+            Simply upload your Word document templates with placeholders, and
+            the system handles the rest.
+          </p>
+        </div>
+        <div
+          class="text-center py-8 px-6 bg-white/90 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        >
+          <i class="fas fa-camera text-4xl text-[#09abe7] mb-5 block"></i>
+          <h3 class="text-xl text-[#09abe7] mb-3">OCR Technology</h3>
+          <p>
+            Extract data from scanned documents, photos, and handwritten notes
+            with high accuracy.
+          </p>
+        </div>
+        <div
+          class="text-center py-8 px-6 bg-white/90 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        >
+          <i class="fas fa-brain text-4xl text-[#09abe7] mb-5 block"></i>
+          <h3 class="text-xl text-[#09abe7] mb-3">AI-Powered Drafting</h3>
+          <p>
+            Generate deed notes in minutes using advanced AI to fill
+            placeholders with correct values.
+          </p>
+        </div>
+        <div
+          class="text-center py-8 px-6 bg-white/90 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        >
+          <i class="fas fa-shield-alt text-4xl text-[#09abe7] mb-5 block"></i>
+          <h3 class="text-xl text-[#09abe7] mb-3">Error Reduction</h3>
+          <p>
+            Minimize manual errors and double-checking, ensuring compliance and
+            accuracy.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="pricing" class="max-w-7xl mx-auto py-20 px-5 relative z-10">
+      <h2 class="font-['Montserrat'] text-5xl text-slate-700 text-center mb-10">
+        Pricing
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+          class="bg-white/90 rounded-xl p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        >
+          <h3 class="text-2xl text-slate-700 mb-2.5">Sole Practitioner</h3>
+          <div class="text-3xl text-[#09abe7] font-bold mb-5">€49/month</div>
+          <p class="mb-5">
+            Perfect for sole practitioners and small firms starting to automate.
+          </p>
+          <ul class="list-none p-0 mb-5">
+            <li class="mb-2.5">Unlimited Deed Notes</li>
+            <li class="mb-2.5">Standard Support</li>
+          </ul>
+          <a
+            href="#join-us"
+            class="bg-[#09abe7] text-white border-none rounded-lg py-3 px-6 text-lg font-semibold cursor-pointer no-underline inline-block transition-all duration-200 hover:bg-slate-700 hover:-translate-y-1"
+            >Start Free Trial <i class="fas fa-rocket ml-2"></i
+          ></a>
+        </div>
+        <div
+          class="bg-white/90 rounded-xl p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        >
+          <h3 class="text-2xl text-slate-700 mb-2.5">Large Firms</h3>
+          <div class="text-3xl text-[#09abe7] font-bold mb-5">
+            Custom Pricing
+          </div>
+          <p class="mb-5">
+            Advanced automation and support for large notary firms.
+          </p>
+          <ul class="list-none p-0 mb-5">
+            <li class="mb-2.5">Unlimited Deed Notes</li>
+            <li class="mb-2.5">Priority Support</li>
+          </ul>
+          <a
+            href="mailto:info@nutarflow.com"
+            class="bg-[#09abe7] text-white border-none rounded-lg py-3 px-6 text-lg font-semibold cursor-pointer no-underline inline-block transition-all duration-200 hover:bg-slate-700 hover:-translate-y-1"
+            ><i class="fas fa-envelope mr-2"></i> Contact Sales</a
           >
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              style="vertical-align: middle; min-width: 18px"
-            >
-              <rect width="20" height="20" rx="4" fill="none" />
-              <path
-                d="M3.5 6.5A1.5 1.5 0 0 1 5 5h10a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 15 15H5a1.5 1.5 0 0 1-1.5-1.5v-7Z"
-                stroke="#fff"
-                stroke-width="1.3"
-              />
-              <path
-                d="M4.5 6.75 10 11.25l5.5-4.5"
-                stroke="#fff"
-                stroke-width="1.3"
-                stroke-linecap="round"
-              />
-            </svg>
-            Notify Me
+        </div>
+      </div>
+    </section>
+    <section
+      id="join-us"
+      class="text-center bg-white/90 rounded-xl p-10 mx-auto my-10 max-w-2xl shadow-lg relative z-10"
+    >
+      <h2 class="font-['Montserrat'] text-5xl text-slate-700 mb-5">Join Us</h2>
+      <p class="mb-8">
+        Stay updated on the latest features and get early access to NutarFlow.
+      </p>
+      <form
+        class="flex justify-center items-center gap-2 mb-4"
+        id="notifyForm"
+        autocomplete="off"
+      >
+        <input
+          type="email"
+          id="email"
+          placeholder="Your email"
+          required
+          class="py-2.5 px-4 border border-slate-300 rounded-lg text-base outline-none transition-all duration-200 focus:border-blue-500 focus:shadow-md bg-slate-50"
+        />
+        <button
+          type="submit"
+          class="bg-[#09abe7] text-white border-none rounded-lg py-2.5 px-5 text-base font-semibold cursor-pointer shadow-md transition-all duration-200 hover:bg-slate-700 hover:-translate-y-0.5 hover:shadow-lg"
+        >
+          <span class="inline-flex items-center gap-2">
+            <i class="fas fa-paper-plane"></i>
+            Subscribe
           </span>
         </button>
       </form>
-      <div class="success-message" id="successMessage" style="display: none">
+      <div
+        class="text-white bg-green-500 text-base mt-4 hidden opacity-0 rounded-lg py-2.5 px-0 font-medium shadow-md tracking-wide transition-opacity duration-700"
+        id="successMessage"
+      >
         Thank you! We'll keep you updated.
       </div>
-    </div>
-    <script>
-      // Replace with your Brevo form endpoint (from the iframe src, extract the base and add /form)
-      const BREVO_FORM_ENDPOINT =
-        "https://2d94d8e5.sibforms.com/serve/MUIFAOLpOpAdRFbinbDcpHr07F8EzHoDMfdrpsgyRgSvYJNgrCNCpq07YBbHBiX2MfV-T7Xhb5JwuRQliYVp200-uCmwZhp-W_24ivWHsayYYoQvVuqzD5p87AFaSfhoO9Vml03Kr1nlMpk4dflDZoP9N5Bne61X8P1c2EMUb9ysbKpCnw0foSj75HT0AMkyW_n9TYoEru5xzOXL5g==";
-
-      const form = document.getElementById("notifyForm");
-      const emailInput = document.getElementById("email");
-      const successMessage = document.getElementById("successMessage");
-
-      form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-        const email = emailInput.value.trim();
-        if (!email) return;
-
-        // Prepare form data as Brevo expects
-        const formData = new FormData();
-        formData.append("EMAIL", email);
-
-        try {
-          const response = await fetch(BREVO_FORM_ENDPOINT, {
-            method: "POST",
-            mode: "no-cors", // Brevo may not support CORS, so we use no-cors
-            body: formData,
-          });
-          // Show success regardless of response due to no-cors
-          successMessage.style.display = "block";
-          setTimeout(() => {
-            successMessage.style.opacity = "1";
-          }, 10);
-          emailInput.value = "";
-          setTimeout(() => {
-            successMessage.style.opacity = "0";
-            setTimeout(() => {
-              successMessage.style.display = "none";
-            }, 700);
-          }, 4000);
-        } catch (err) {
-          alert("There was a problem subscribing. Please try again later.");
-        }
-      });
-    </script>
+    </section>
+    <section
+      id="contact"
+      class="text-center max-w-7xl mx-auto py-20 px-5 relative z-10"
+    >
+      <h2 class="font-['Montserrat'] text-5xl text-slate-700 mb-5">
+        Contact Us
+      </h2>
+      <p class="mb-5">Have questions? Reach out to us for more information.</p>
+      <p>
+        <a
+          href="mailto:info@nutarflow.com"
+          <a
+          href="mailto:info@nutarflow.com"
+          class="bg-[#09abe7] text-white border-none rounded-lg py-2.5 px-5 text-base font-semibold cursor-pointer no-underline inline-block shadow-md transition-all duration-200 hover:bg-slate-700 hover:-translate-y-0.5 hover:shadow-lg"
+          ><i class="fas fa-envelope mr-2"></i> Email Us</a
+        >
+      </p>
+    </section>
+    <footer class="text-center py-5 bg-white/80 relative z-10">
+      <p>&copy; 2025 NutarFlow. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
