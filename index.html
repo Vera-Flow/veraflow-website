@@ -12,29 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <style>
-      .bg-shape {
-        position: absolute;
-        border-radius: 50%;
-        filter: blur(60px);
-        opacity: 0.35;
-        z-index: 0;
-      }
-      .bg-shape1 {
-        width: 340px;
-        height: 340px;
-        background: #09abe7;
-        top: -80px;
-        left: -120px;
-      }
-      .bg-shape2 {
-        width: 260px;
-        height: 260px;
-        background: #004080;
-        bottom: -60px;
-        right: -80px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body
     class="m-0 p-0 font-['Roboto'] bg-gradient-to-br from-slate-200 to-slate-50 text-slate-800 leading-relaxed"
@@ -72,7 +50,17 @@
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <div
-          class="text-center py-8 px-6 bg-white/90 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+          class="text-center py-8 px-6 bg-white/90 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl feature-card"
+        >
+          <i class="fas fa-layer-group text-4xl text-[#09abe7] mb-5 block"></i>
+          <h3 class="text-xl text-[#09abe7] mb-3">Template Setup</h3>
+          <p>
+            Set up templates with placeholders that can be automatically filled
+            from document queries.
+          </p>
+        </div>
+        <div
+          class="text-center py-8 px-6 bg-white/90 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl feature-card"
         >
           <i class="fas fa-file-upload text-4xl text-[#09abe7] mb-5 block"></i>
           <h3 class="text-xl text-[#09abe7] mb-3">Document Upload</h3>
@@ -81,30 +69,22 @@
           </p>
         </div>
         <div
-          class="text-center py-8 px-6 bg-white/90 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+          class="text-center py-8 px-6 bg-white/90 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl feature-card"
         >
-          <i class="fas fa-camera text-4xl text-[#09abe7] mb-5 block"></i>
+          <i class="fas fa-brain text-4xl text-[#09abe7] mb-5 block"></i>
           <h3 class="text-xl text-[#09abe7] mb-3">AI Processing</h3>
           <p>
-            Our advanced AI analyzes uploaded documents to extract key
+            Our DocSense AI analyzes uploaded documents to extract key
             information and insights.
           </p>
         </div>
         <div
-          class="text-center py-8 px-6 bg-white/90 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+          class="text-center py-8 px-6 bg-white/90 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl feature-card"
         >
-          <i class="fas fa-brain text-4xl text-[#09abe7] mb-5 block"></i>
-          <h3 class="text-xl text-[#09abe7] mb-3">Template Setup</h3>
-          <p>
-            Set up templates with placeholders that can be automatically filled
-            from document queries.
-          </p>
-        </div>
-        <div
-          class="text-center py-8 px-6 bg-white/90 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
-        >
-          <i class="fas fa-shield-alt text-4xl text-[#09abe7] mb-5 block"></i>
-          <h3 class="text-xl text-[#09abe7] mb-3">Automated Generation</h3>
+          <i class="fas fa-cogs text-4xl text-[#09abe7] mb-5 block"></i>
+          <h3 class="text-xl text-[#09abe7] mb-3">
+            Automated Document Generation
+          </h3>
           <p>
             Automate document generation by querying the original document to
             fill placeholders accurately.
@@ -116,45 +96,56 @@
       <h2 class="font-['Montserrat'] text-5xl text-slate-700 text-center mb-10">
         Pricing
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div
-          class="bg-white/90 rounded-xl p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
-        >
-          <h3 class="text-2xl text-slate-700 mb-2.5">Basic Plan</h3>
-          <div class="text-3xl text-[#09abe7] font-bold mb-5">€49/month</div>
-          <p class="mb-5">
-            Perfect for individuals and small teams starting to automate
-            document workflows.
-          </p>
-          <ul class="list-none p-0 mb-5">
-            <li class="mb-2.5">Unlimited Document Processing</li>
-            <li class="mb-2.5">Standard Support</li>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="title">Starter</div>
+          <div class="price">
+            €49<span class="text-sm" style="font-size: 0.7rem; color: #374151"
+              >/month</span
+            >
+          </div>
+          <div class="annual">€470/year (Save 20%)</div>
+          <ul>
+            <li>Up to 50 Documents / month</li>
+            <li>€0.98 per extra document</li>
+            <li>Standard Email Support</li>
           </ul>
-          <a
-            href="#join-us"
-            class="bg-[#09abe7] text-white border-none rounded-lg py-3 px-6 text-lg font-semibold cursor-pointer no-underline inline-block transition-all duration-200 hover:bg-slate-700 hover:-translate-y-1"
-            >Start Free Trial <i class="fas fa-rocket ml-2"></i
+          <a href="#join-us" class="cta"
+            >Start Free Trial <i class="fas fa-arrow-right ml-2"></i
           ></a>
         </div>
-        <div
-          class="bg-white/90 rounded-xl p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
-        >
-          <h3 class="text-2xl text-slate-700 mb-2.5">Enterprise Plan</h3>
-          <div class="text-3xl text-[#09abe7] font-bold mb-5">
-            Custom Pricing
+
+        <div class="pricing-card featured">
+          <div class="pricing-badge">MOST POPULAR</div>
+          <div class="title">Professional</div>
+          <div class="price">
+            €149<span class="text-sm" style="font-size: 0.7rem; color: #374151"
+              >/month</span
+            >
           </div>
-          <p class="mb-5">
-            Advanced automation and support for large organizations.
-          </p>
-          <ul class="list-none p-0 mb-5">
-            <li class="mb-2.5">Unlimited Document Processing</li>
-            <li class="mb-2.5">Priority Support</li>
+          <div class="annual">€1,430/year (Save 20%)</div>
+          <ul>
+            <li>Up to 250 Documents / month</li>
+            <li>€0.60 per extra document</li>
+            <li>Priority Support</li>
           </ul>
-          <a
-            href="mailto:info@veraflow.com"
-            class="bg-[#09abe7] text-white border-none rounded-lg py-3 px-6 text-lg font-semibold cursor-pointer no-underline inline-block transition-all duration-200 hover:bg-slate-700 hover:-translate-y-1"
-            ><i class="fas fa-envelope mr-2"></i> Contact Sales</a
-          >
+          <a href="#join-us" class="cta"
+            >Start Free Trial <i class="fas fa-arrow-right ml-2"></i
+          ></a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="title">Enterprise</div>
+          <div class="price">Custom Pricing</div>
+          <ul>
+            <li>Unlimited Document Processing</li>
+            <li>Audit Logs & History</li>
+            <li>Dedicated Account Manager</li>
+          </ul>
+          <a href="mailto:info@veraflow.com" class="cta"
+            >Contact Sales <i class="fas fa-envelope ml-2"></i
+          ></a>
         </div>
       </div>
     </section>
