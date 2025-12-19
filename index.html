@@ -2,208 +2,357 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VeraFlow – Automate Document Generation with AI</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css?v=1.0.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
   </head>
-  <body
-    class="m-0 p-0 font-['Roboto'] bg-gradient-to-br from-slate-200 to-slate-50 text-slate-800 leading-relaxed"
-  >
-    <div class="bg-shape bg-shape1"></div>
-    <div class="bg-shape bg-shape2"></div>
-    <header class="text-center py-10 px-5 relative z-10">
+  <body class="bg-gray-100 font-sans pt-20">
+    <!-- Header -->
+    <header
+      id="header"
+      class="bg-white shadow-md fixed top-0 left-0 w-full transition-all duration-500 ease-in-out z-50"
+    >
       <div
-        class="font-['Montserrat'] text-5xl text-slate-700 tracking-widest mb-2.5 font-bold drop-shadow-lg"
+        class="container mx-auto px-4 py-6 flex justify-between items-center"
       >
-        VeraFlow
-      </div>
-      <div class="text-xl text-slate-600 mb-5 font-medium tracking-wide">
-        Automate Document Generation with AI
-      </div>
-      <p class="max-w-4xl mx-auto mb-10 text-xl text-slate-600">
-        VeraFlow empowers you to upload any type of document, harness advanced
-        AI to extract key information, and create dynamic templates with smart
-        placeholders. Effortlessly automate document generation by querying your
-        original files—streamlining your workflow for greater speed and
-        accuracy. Stay tuned for a smarter, more efficient way to work!
-      </p>
-      <a
-        href="#features"
-        class="bg-[#09abe7] text-white border-none rounded-lg py-3 px-6 text-xl font-semibold cursor-pointer no-underline inline-block transition-all duration-200 hover:bg-slate-700 hover:-translate-y-1"
-        >Learn More <i class="fas fa-arrow-right ml-2"></i
-      ></a>
-    </header>
-    <section
-      id="features"
-      class="max-w-screen-xl mx-auto py-20 px-8 relative z-10"
-    >
-      <h2 class="font-['Montserrat'] text-5xl text-slate-700 text-center mb-10">
-        Key Features
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-        <div
-          class="text-center py-8 px-6 bg-white/90 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl feature-card"
-        >
-          <i class="fas fa-layer-group text-4xl text-[#09abe7] mb-5 block"></i>
-          <h3 class="text-xl text-[#09abe7] mb-3">Template Setup</h3>
-          <p>
-            Set up templates with placeholders that can be automatically filled
-            from document queries.
-          </p>
-        </div>
-        <div
-          class="text-center py-8 px-6 bg-white/90 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl feature-card"
-        >
-          <i class="fas fa-file-upload text-4xl text-[#09abe7] mb-5 block"></i>
-          <h3 class="text-xl text-[#09abe7] mb-3">Document Upload</h3>
-          <p>
-            Upload any kind of document for AI-powered processing and analysis.
-          </p>
-        </div>
-        <div
-          class="text-center py-8 px-6 bg-white/90 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl feature-card"
-        >
-          <i class="fas fa-brain text-4xl text-[#09abe7] mb-5 block"></i>
-          <h3 class="text-xl text-[#09abe7] mb-3">AI Processing</h3>
-          <p>
-            Our DocSense AI analyzes uploaded documents to extract key
-            information and insights.
-          </p>
-        </div>
-        <div
-          class="text-center py-8 px-6 bg-white/90 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl feature-card"
-        >
-          <i class="fas fa-cogs text-4xl text-[#09abe7] mb-5 block"></i>
-          <h3 class="text-xl text-[#09abe7] mb-3">
-            Automated Document Generation
-          </h3>
-          <p>
-            Automate document generation by querying the original document to
-            fill placeholders accurately.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="pricing" class="max-w-7xl mx-auto py-20 px-5 relative z-10">
-      <h2 class="font-['Montserrat'] text-5xl text-slate-700 text-center mb-10">
-        Pricing
-      </h2>
-
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <div class="title">Starter</div>
-          <div class="price">
-            €49<span class="text-sm" style="font-size: 0.7rem; color: #374151"
-              >/month</span
-            >
-          </div>
-          <div class="annual">€470/year (Save 20%)</div>
-          <ul>
-            <li>Up to 50 Documents / month</li>
-            <li>€0.98 per extra document</li>
-            <li>Standard Email Support</li>
-          </ul>
-          <a href="#join-us" class="cta"
-            >Start Free Trial <i class="fas fa-arrow-right ml-2"></i
-          ></a>
-        </div>
-
-        <div class="pricing-card featured">
-          <div class="pricing-badge">MOST POPULAR</div>
-          <div class="title">Professional</div>
-          <div class="price">
-            €149<span class="text-sm" style="font-size: 0.7rem; color: #374151"
-              >/month</span
-            >
-          </div>
-          <div class="annual">€1,430/year (Save 20%)</div>
-          <ul>
-            <li>Up to 250 Documents / month</li>
-            <li>€0.60 per extra document</li>
-            <li>Priority Support</li>
-          </ul>
-          <a href="#join-us" class="cta"
-            >Start Free Trial <i class="fas fa-arrow-right ml-2"></i
-          ></a>
-        </div>
-
-        <div class="pricing-card">
-          <div class="title">Enterprise</div>
-          <div class="price">Custom Pricing</div>
-          <ul>
-            <li>Unlimited Document Processing</li>
-            <li>Audit Logs & History</li>
-            <li>Dedicated Account Manager</li>
-          </ul>
-          <a href="mailto:info@veraflow.com" class="cta"
-            >Contact Sales <i class="fas fa-envelope ml-2"></i
-          ></a>
-        </div>
-      </div>
-    </section>
-    <section
-      id="join-us"
-      class="text-center bg-white/90 rounded-xl p-10 mx-auto my-10 max-w-2xl shadow-lg relative z-10"
-    >
-      <h2 class="font-['Montserrat'] text-5xl text-slate-700 mb-5">Join Us</h2>
-      <p class="mb-8">
-        Stay updated on the latest features and get early access to VeraFlow.
-      </p>
-      <form
-        class="flex justify-center items-center gap-2 mb-4"
-        id="notifyForm"
-        autocomplete="off"
-      >
-        <input
-          type="email"
-          id="email"
-          placeholder="Your email"
-          required
-          class="py-2.5 px-4 border border-slate-300 rounded-lg text-base outline-none transition-all duration-200 focus:border-blue-500 focus:shadow-md bg-slate-50"
-        />
+        <div class="text-2xl font-bold text-[#2c4e9b]">VeraFlow</div>
         <button
-          type="submit"
-          class="bg-[#09abe7] text-white border-none rounded-lg py-2.5 px-5 text-base font-semibold cursor-pointer shadow-md transition-all duration-200 hover:bg-slate-700 hover:-translate-y-0.5 hover:shadow-lg"
+          id="menu-toggle"
+          class="md:hidden text-gray-600 focus:outline-none"
         >
-          <span class="inline-flex items-center gap-2">
-            <i class="fas fa-paper-plane"></i>
-            Subscribe
-          </span>
+          <i class="fas fa-bars text-2xl"></i>
         </button>
-      </form>
-      <div
-        class="text-white bg-green-500 text-base mt-4 hidden opacity-0 rounded-lg py-2.5 px-0 font-medium shadow-md tracking-wide transition-opacity duration-700"
-        id="successMessage"
-      >
-        Thank you! We'll keep you updated.
+        <nav id="nav-menu" class="hidden md:flex space-x-8">
+          <a href="#features" class="text-gray-600 hover:text-gray-800"
+            >Features</a
+          >
+          <a href="#pricing" class="text-gray-600 hover:text-gray-800"
+            >Pricing</a
+          >
+          <a href="#join-us" class="text-gray-600 hover:text-gray-800"
+            >Join Us</a
+          >
+          <a href="#contact" class="text-gray-600 hover:text-gray-800"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="text-white py-20"
+      style="
+        background: linear-gradient(
+            rgba(9, 171, 231, 0.7),
+            rgba(44, 78, 155, 0.7)
+          ),
+          url('banner.webp');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-4">
+          Automate Document Generation with VeraFlow
+        </h2>
+        <p class="text-xl mb-8">
+          Upload any type of document and let our DocSense AI extract key
+          information to create dynamic templates with smart placeholders.
+          Automate document generation effortlessly.
+        </p>
+        <a
+          href="#pricing"
+          class="btn-hover bg-[#09abe7] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#2c4e9b] transition"
+          role="button"
+        >
+          <i class="fas fa-arrow-right mr-2"></i>Get Started
+        </a>
       </div>
     </section>
-    <section
-      id="contact"
-      class="text-center max-w-7xl mx-auto py-20 px-5 relative z-10"
-    >
-      <h2 class="font-['Montserrat'] text-5xl text-slate-700 mb-5">
-        Contact Us
-      </h2>
-      <p class="mb-5">Have questions? Reach out to us for more information.</p>
-      <p>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white fade-in">
+      <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-bold text-center mb-12 text-[#2c4e9b]">
+          Key Features
+        </h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="feature-card text-center">
+            <div
+              class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Template Setup</h4>
+            <p class="text-gray-600">
+              Set up templates with placeholders that can be automatically
+              filled from document queries.
+            </p>
+          </div>
+          <div class="feature-card text-center">
+            <div
+              class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Document Upload</h4>
+            <p class="text-gray-600">
+              Upload any kind of document for AI-powered processing and
+              analysis.
+            </p>
+          </div>
+          <div class="feature-card text-center">
+            <div
+              class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-purple-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">DocSense AI Processing</h4>
+            <p class="text-gray-600">
+              Our proprietary DocSense AI engine intelligently processes
+              unstructured data with industry-leading accuracy.
+            </p>
+          </div>
+          <div class="feature-card text-center">
+            <div
+              class="bg-yellow-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-yellow-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">
+              Automated Document Generation
+            </h4>
+            <p class="text-gray-600">
+              Automate document generation by querying the original document to
+              fill placeholders accurately.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-100 fade-in">
+      <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-bold text-center mb-12 text-[#2c4e9b]">
+          Pricing
+        </h3>
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="px-6 py-8">
+              <h4 class="text-2xl font-bold text-center mb-4">Starter</h4>
+              <p class="text-gray-600 mb-4 text-center">
+                Perfect for small teams getting started with document
+                automation.
+              </p>
+              <div class="text-center mb-2">
+                <span class="text-4xl font-bold">€49</span
+                ><span style="font-size: 0.8em; color: gray">/ month</span>
+              </div>
+              <div class="text-center mb-6">
+                <span class="text-sm text-green-600 font-semibold"
+                  >€470/year (Save 20%)</span
+                >
+              </div>
+              <ul class="mb-6 text-center">
+                <li class="mb-2">Up to 50 Documents / month</li>
+                <li class="mb-2">€0.98 per extra document</li>
+                <li class="mb-2">Standard Email Support</li>
+              </ul>
+              <p class="text-sm text-gray-600 mb-4 text-center">
+                Replaces ~13 hours of admin work.
+              </p>
+              <a
+                href="#join-us"
+                class="btn-hover w-full bg-[#09abe7] text-white py-3 rounded-lg font-semibold hover:bg-[#2c4e9b] transition flex items-center justify-center"
+                style="text-decoration: none"
+              >
+                <i class="fas fa-arrow-right mr-2"></i>Start Free Trial
+              </a>
+            </div>
+          </div>
+          <div class="relative md:scale-105 md:shadow-2xl">
+            <div
+              class="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10"
+            >
+              <span
+                class="bg-[#09abe7] text-white px-3 py-1 rounded-full text-xs font-bold"
+                >MOST POPULAR</span
+              >
+            </div>
+            <div
+              class="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-[#09abe7]"
+            >
+              <div class="px-6 py-8 pt-12">
+                <h4 class="text-2xl font-bold text-center mb-4">
+                  Professional
+                </h4>
+                <p class="text-gray-600 mb-4 text-center">
+                  Automate your entire document workflow with advanced AI.
+                </p>
+                <div class="text-center mb-2">
+                  <span class="text-4xl font-bold">€149</span
+                  ><span style="font-size: 0.8em; color: gray">/ month</span>
+                </div>
+                <div class="text-center mb-6">
+                  <span class="text-sm text-green-600 font-semibold"
+                    >€1,430/year (Save 20%)</span
+                  >
+                </div>
+                <ul class="mb-6 text-center">
+                  <li class="mb-2">Up to 250 Documents / month</li>
+                  <li class="mb-2">€0.60 per extra document</li>
+                  <li class="mb-2">Priority Support</li>
+                </ul>
+                <p class="text-sm text-gray-600 mb-4 text-center">
+                  Replaces ~60 hours of admin work.
+                </p>
+                <a
+                  href="#join-us"
+                  class="btn-hover w-full bg-[#09abe7] text-white py-3 rounded-lg font-semibold hover:bg-[#2c4e9b] transition flex items-center justify-center"
+                  style="text-decoration: none"
+                >
+                  <i class="fas fa-arrow-right mr-2"></i>Start Free Trial
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="px-6 py-8">
+              <h4 class="text-2xl font-bold text-center mb-4">Enterprise</h4>
+              <p class="text-gray-600 mb-4 text-center">
+                Compliance and reliability for high-volume document processing.
+              </p>
+              <div class="text-center mb-6">
+                <span class="text-4xl font-bold">Custom Pricing</span>
+              </div>
+              <ul class="mb-6 text-center">
+                <li class="mb-2">Unlimited Document Processing</li>
+                <li class="mb-2">Audit Logs & History</li>
+                <li class="mb-2">Dedicated Account Manager</li>
+              </ul>
+              <p class="text-sm text-gray-600 mb-4 text-center">
+                Replaces a part-time employee.
+              </p>
+              <a
+                href="mailto:info@veraflow.com"
+                class="btn-hover w-full bg-[#09abe7] text-white py-3 rounded-lg font-semibold hover:bg-[#2c4e9b] transition flex items-center justify-center"
+                style="text-decoration: none"
+              >
+                <i class="fas fa-envelope mr-2"></i>Contact Sales
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Join Us Section -->
+    <section id="join-us" class="py-20 bg-white fade-in">
+      <div class="container mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-4 text-[#2c4e9b]">Join Us</h3>
+        <p class="text-xl mb-8 text-gray-600">
+          Stay updated on the latest features and get early access to VeraFlow.
+        </p>
+        <form
+          class="flex justify-center items-center gap-2 mb-4"
+          id="notifyForm"
+          autocomplete="off"
+        >
+          <input
+            type="email"
+            id="email"
+            placeholder="Your email"
+            required
+            class="py-3 px-4 border border-gray-300 rounded-lg text-base outline-none transition-all duration-200 focus:border-[#09abe7] focus:shadow-md bg-gray-50"
+          />
+          <button
+            type="submit"
+            class="bg-[#09abe7] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#2c4e9b] transition flex items-center gap-2"
+          >
+            <i class="fas fa-paper-plane"></i>Subscribe
+          </button>
+        </form>
+        <div
+          id="successMessage"
+          class="text-green-600 mt-4 opacity-0 transition-opacity duration-700"
+        >
+          Thank you for subscribing! We'll keep you updated.
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100 fade-in">
+      <div class="container mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-4 text-[#2c4e9b]">Contact Us</h3>
+        <p class="text-xl mb-8 text-gray-600">
+          Have questions? Reach out to us for more information.
+        </p>
         <a
           href="mailto:info@veraflow.com"
-          class="bg-[#09abe7] text-white border-none rounded-lg py-2.5 px-5 text-base font-semibold cursor-pointer no-underline inline-block shadow-md transition-all duration-200 hover:bg-slate-700 hover:-translate-y-0.5 hover:shadow-lg"
-          ><i class="fas fa-envelope mr-2"></i> Email Us</a
+          class="btn-hover bg-[#09abe7] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#2c4e9b] transition inline-flex items-center gap-2"
+          style="text-decoration: none"
         >
-      </p>
+          <i class="fas fa-envelope"></i>Email Us
+        </a>
+      </div>
     </section>
-    <footer class="text-center py-5 bg-white/80 relative z-10">
-      <p>&copy; 2025 VeraFlow. All rights reserved.</p>
+    <footer class="text-center py-8 bg-white">
+      <p class="text-gray-600">&copy; 2025 VeraFlow. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
   </body>

@@ -1,158 +1,114 @@
-.bg-shape {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.35;
-  z-index: 0;
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
 }
-.bg-shape1 {
-  width: 340px;
-  height: 340px;
-  background: #09abe7;
-  top: -80px;
-  left: -120px;
+
+/* LinkedIn button official blue hover */
+.linkedin-contact:hover {
+  background-color: #09abe7 !important;
+  color: #fff !important;
 }
-.bg-shape2 {
-  width: 260px;
-  height: 260px;
-  background: #004080;
-  bottom: -60px;
-  right: -80px;
+.linkedin-contact:hover i {
+  color: #fff !important;
 }
-/* Bright blue hover highlight + top border sweep */
-.feature-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  transition: transform 200ms cubic-bezier(0.2, 0.9, 0.2, 1),
-    box-shadow 220ms ease;
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-.feature-card > * {
-  position: relative;
-  z-index: 1;
-}
-/* soft inset glow */
-.feature-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  box-shadow: none;
-  transition: box-shadow 220ms ease, opacity 220ms ease;
-  pointer-events: none;
-  z-index: 0;
-}
-/* animated top border line */
-.feature-card::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 4px;
-  width: 0;
-  background: linear-gradient(
-    90deg,
-    #06b6d4 0%,
-    #0384c8 60%,
-    #0369a1 100%
-  );
-  transition: width 420ms cubic-bezier(0.2, 0.9, 0.2, 1);
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  z-index: 3;
-  pointer-events: none;
-}
-.feature-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 48px rgba(3, 105, 161, 0.12);
-}
-.feature-card:hover::before {
-  box-shadow: inset 0 0 0 6px rgba(9, 171, 231, 0.06);
+
+.fade-in.visible {
   opacity: 1;
+  transform: translateY(0);
 }
-.feature-card:hover::after {
+
+/* Mobile menu */
+#nav-menu.mobile {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 10;
+  max-height: 200px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+#nav-menu.mobile a {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+#nav-menu a {
+  position: relative;
+  text-decoration: none;
+}
+
+#nav-menu a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #09abe7;
+  transition: width 0.3s ease;
+}
+
+#nav-menu a:hover::after {
   width: 100%;
 }
 
-.pricing-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+#nav-menu a:hover {
+  text-decoration: none; /* Remove default underline */
 }
-@media (min-width: 900px) {
-  .pricing-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+
+/* Button hover effects */
+.btn-hover {
+  transition: box-shadow 0.2s ease;
 }
-.pricing-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  padding: 2rem;
-  text-align: center;
+
+.btn-hover:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Feature card styles similar to portfolio recent works */
+.feature-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  padding: 2.5rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
-  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.06);
-  transition: transform 220ms ease, box-shadow 220ms ease,
-    border-color 220ms ease;
+  overflow: hidden;
 }
-.pricing-card .title {
-  font-size: 1.5rem;
-  color: #0f172a;
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-}
-.pricing-card .price {
-  font-size: 2.25rem;
-  color: #09abe7; /* primary blue */
-  font-weight: 800;
-  margin-bottom: 0.4rem;
-}
-.pricing-card .annual {
-  color: #059669;
-  font-weight: 600;
-  margin-bottom: 0.8rem;
-}
-.pricing-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0.8rem 0 1.2rem 0;
-}
-.pricing-card li {
-  margin: 0.6rem 0;
-  color: #374151;
-}
-.pricing-card .cta {
-  display: inline-block;
-  margin-top: 1rem;
-  background: #09abe7; /* primary blue */
-  color: #fff;
-  padding: 0.7rem 1.2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 8px 20px rgba(3, 105, 161, 0.08);
-  transition: background 180ms ease, transform 140ms ease,
-    box-shadow 180ms ease;
-}
-.pricing-card .cta:hover {
-  background: #0369a1;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(3, 105, 161, 0.12);
-}
-.pricing-card.featured {
-  transform: translateY(-8px) scale(1.05);
-  border: 3px solid #09abe7;
-  box-shadow: 0 30px 60px rgba(3, 105, 161, 0.15);
-}
-.pricing-badge {
+
+.feature-card::before {
+  content: "";
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -14px;
-  background: #09abe7;
-  color: #fff;
-  padding: 0.35rem 0.9rem;
-  border-radius: 999px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  box-shadow: 0 6px 18px rgba(3, 105, 161, 0.12);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #09abe7, #2c4e9b);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+  border-color: #09abe7;
 }
