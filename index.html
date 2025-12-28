@@ -306,6 +306,36 @@
     <footer class="text-center py-8 bg-white">
       <p class="text-gray-600">&copy; 2025 VeraFlow. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <!-- Cookie Consent Banner -->
+    <div
+      id="cookie-banner"
+      class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 z-50 hidden"
+    >
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <p class="mb-4 md:mb-0">
+          This website uses cookies to enhance your experience, analyze site
+          traffic, and personalize content. By clicking "Agree" you consent to
+          our use of cookies. Declining will limit some features but you can
+          still browse the site normally.
+        </p>
+        <div class="flex space-x-2">
+          <button
+            id="accept-cookies"
+            class="bg-[#09abe7] text-white px-4 py-2 rounded hover:bg-[#2c4e9b] transition"
+          >
+            Accept
+          </button>
+          <button
+            id="decline-cookies"
+            class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition"
+          >
+            Decline
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js?v=1.0.1"></script>
   </body>
 </html>

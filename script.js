@@ -38,6 +38,13 @@ form.addEventListener("submit", async function (e) {
   const email = emailInput.value.trim();
   if (!email) return;
 
+  // Check cookie consent
+  const consent = getCookie("cookieConsent");
+  if (consent === "declined") {
+    alert("You have declined cookies. Newsletter signup is disabled.");
+    return;
+  }
+
   // Prepare form data as Brevo expects
   const formData = new FormData();
   formData.append("EMAIL", email);
@@ -63,4 +70,45 @@ form.addEventListener("submit", async function (e) {
   } catch (err) {
     alert("There was a problem subscribing. Please try again later.");
   }
+});
+
+// Cookie Consent Logic
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(";").shift();
+}
+
+function setCookie(name, value, days) {
+  const date = new Date();
+  date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+  const expires = `expires=${date.toUTCString()}`;
+  document.cookie = `${name}=${value}; ${expires}; path=/`;
+}
+
+const cookieBanner = document.getElementById("cookie-banner");
+const acceptBtn = document.getElementById("accept-cookies");
+const declineBtn = document.getElementById("decline-cookies");
+const notifyForm = document.getElementById("notifyForm");
+const submitBtn = notifyForm.querySelector('button[type="submit"]');
+
+const consent = getCookie("cookieConsent");
+
+if (!consent) {
+  cookieBanner.classList.remove("hidden");
+} else if (consent === "declined") {
+  // Hide the entire Join Us section
+  document.getElementById("join-us").style.display = "none";
+}
+
+acceptBtn.addEventListener("click", () => {
+  setCookie("cookieConsent", "accepted", 365);
+  cookieBanner.classList.add("hidden");
+});
+
+declineBtn.addEventListener("click", () => {
+  setCookie("cookieConsent", "declined", 365);
+  cookieBanner.classList.add("hidden");
+  // Hide the entire Join Us section
+  document.getElementById("join-us").style.display = "none";
 });
